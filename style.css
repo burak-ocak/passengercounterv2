@@ -1,0 +1,31 @@
+body{
+    background-image: url(passenger-counter.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    text-align: center;
+}
+
+h2{
+    color: white;
+    font-size: 3rem;
+}
+
+button{
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+#btn-increment{
+    background-color: rgb(133, 12, 12);
+}
+
+#btn-save{
+    background-color: green;
+}
+
+#save-count, #total-people{
+    color: white;
+    font-size: 2rem;
+}

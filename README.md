@@ -1,1 +1,1 @@
-# passengercounterv2
+# Ödev 12 kapsamında verilen günlük yolcu giriş sayısı bazlı proje tekrarlanmak amaçlı oluşturulmuş bir proje dosyasıdır.
