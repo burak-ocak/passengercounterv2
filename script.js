@@ -4,6 +4,7 @@ let btnSave = document.querySelector("#btn-save");
 let saveCount = document.querySelector("#save-count");
 let gunler = [];
 let totalPeople = document.querySelector("#total-people");
+let total = [];
 
 let count = 0;
 
@@ -16,7 +17,15 @@ btnSave.addEventListener("click", function(){
     saveCount.textContent += count + " - ";
     gunler.push(count);
     
-    localStorage.setItem("gunSayac" , JSON.stringify(gunler))
+    localStorage.setItem("gunSayac" , JSON.stringify(gunler));
+    
+    let toplam = 0;
+    gunler.forEach( gunler => toplam += gunler )
+    totalPeople.textContent = "Total People: " + toplam;
+    
+    total.push(toplam);
+    localStorage.setItem("total", JSON.stringify(total));
+
 
     count = 0;
     entryCount.textContent = count;
@@ -30,8 +39,10 @@ if(okuma !== null){
         saveCount.textContent += eleman + " - ";
         gunler.push(eleman);
     } )
-    for(let i = 0; i < formatJs.length; i++){
-        formatJs[i] = 
-        totalPeople.textContent += formatJs[i];
-    }
+}
+
+let okuma2 = localStorage.getItem("total");
+if(okuma2 !== null){
+    let formatJs2 = JSON.parse(okuma2);
+    totalPeople.textContent = "Total People: " + formatJs2[formatJs2.length - 1];
 }
